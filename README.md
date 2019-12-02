@@ -181,7 +181,7 @@ dimensions of annotations.
 We recommend to check out the [demo](MusicObjectDetector/demo) folder first, which provides a self-contained script for performing  object detection and does not depend on this library. It comes with a pre-trained model for convenience and a simple text output for interoperability with other applications.
 
 ## Inference from within this library
-If you have trained a model by yourself, [this document](research/object_detection/g3doc/exporting_models.md) describes how to prepare it. Basically, you just run `export_inference_graph.py` with appropriate arguments or `freeze_model.ps1` after setting the paths accordingly. Alternatively, a pre-trained model can be download from here: [2018-05-15_faster-rcnn_inception-resnet-v2_2000-proposals_full-page-detection_muscima-pp.pb](https://owncloud.tuwien.ac.at/index.php/s/5J1c8yhnVXB6Sm2/download). 
+If you have trained a model by yourself, [this document](research/object_detection/g3doc/exporting_models.md) describes how to prepare it. Basically, you just run `export_inference_graph.py` with appropriate arguments or `freeze_model.ps1` after setting the paths accordingly. Alternatively, pre-trained models can be download from the [release section](https://github.com/apacha/MusicObjectDetector-TF/releases). 
 
 
 Once you have the frozen model, you can perform inference on a single image by running
