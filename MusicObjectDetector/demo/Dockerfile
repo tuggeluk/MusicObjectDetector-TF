@@ -48,7 +48,7 @@ RUN pip install h5py \
 	tqdm\
 	opencv-python \
 	omrdatasettools==0.15 \
-	Cython \
+	cython \
 	pycocotools \
 	pandas
 
