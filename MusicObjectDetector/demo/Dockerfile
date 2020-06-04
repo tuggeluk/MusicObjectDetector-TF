@@ -1,4 +1,4 @@
-ARG CUDA="9.0"
+ARG CUDA="10.0"
 ARG CUDNN="7"
 
 # Get the base images
@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -y libgtk2.0.0 \
     libxext6 \
     wget \
     bzip2 \
+    vim \    
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
@@ -49,7 +50,16 @@ RUN pip install h5py \
 	opencv-python \
 	omrdatasettools==0.15 \
 	cython \
-	pycocotools \
-	pandas
+	pandas 
 
+RUN pip install	pycocotools
 
+# Insteall correct protoc version
+RUN wget https://github.com/protocolbuffers/protobuf/releases/download/v3.6.1/protobuf-python-3.6.1.tar.gz
+RUN tar -xzf protobuf-python-3.6.1.tar.gz
+WORKDIR /protobuf-3.6.1
+RUN ./configure
+RUN make
+RUN make check
+RUN make install
+RUN ldconfig
