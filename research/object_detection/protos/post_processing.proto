@@ -15,10 +15,10 @@ message BatchNonMaxSuppression {
   optional float iou_threshold = 2 [default = 0.6];
 
   // Maximum number of detections to retain per class.
-  optional int32 max_detections_per_class = 3 [default = 1200];
+  optional int32 max_detections_per_class = 3 [default = 2400];
 
   // Maximum number of detections to retain across all classes.
-  optional int32 max_total_detections = 5 [default = 1200];
+  optional int32 max_total_detections = 5 [default = 2400];
 
   // Whether to use the implementation of NMS that guarantees static shapes.
   optional bool use_static_shapes = 6 [default = false];
