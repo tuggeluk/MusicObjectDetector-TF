@@ -144,7 +144,12 @@ def main(_):
     with open(data_dir+"/deepscores_oriented_"+FLAGS.set+".json", 'r') as ann_file:
         data = json.load(ann_file)
 
-
+    # maxi = 0
+    # for _,ex in enumerate(data['images']):
+    #     print(len(ex['ann_ids']))
+    #     if len(ex['ann_ids']) > maxi:
+    #         maxi = len(ex['ann_ids'])
+    # print(maxi)
     for idx, example in tqdm(enumerate(data['images']),
                              desc="Parsing annotations from {0} set into TF-Example".format(FLAGS.set),
                              total=len(data['images'])):
