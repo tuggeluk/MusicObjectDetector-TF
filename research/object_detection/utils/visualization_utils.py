@@ -435,7 +435,7 @@ def draw_bounding_boxes_on_image_tensors(images,
 
 def draw_side_by_side_evaluation_image(eval_dict,
                                        category_index,
-                                       max_boxes_to_draw=1200,
+                                       max_boxes_to_draw=10000,
                                        min_score_thresh=0.2,
                                        use_normalized_coordinates=True):
   """Creates a side-by-side image with detections and groundtruth.
